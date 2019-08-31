@@ -8,7 +8,7 @@
   1.1. In Finder (`CMD + Spacebar`), type Terminal
 2. Paste this code `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 
-## Install Visual Studio Code on macOS
+## Install Visual Studio Code
 
 [Visual Studio Code](https://code.visualstudio.com/)  is a lightweight but powerful source code editor which runs on your desktop and is available for Windows, macOS and Linux. It comes with built-in support for JavaScript, TypeScript and Node.js and has a rich ecosystem of extensions for other languages (such as C++, C#, Java, Python, PHP, Go) and runtimes (such as .NET and Unity).
 
@@ -22,14 +22,14 @@
 
 Download and install from [here](https://code.visualstudio.com/)
 
-## C# Development (.NET Core SDK) on macOS
+## C# Development (.NET Core SDK)
 
 [.NET Core](https://dotnet.microsoft.com) is a cross-platform version of .NET for building websites, services, and console apps. We are going to use it for our C# Development.
 
 1. Open the terminal
 2. Install with this command: `brew cask install dotnet-sdk`
 
-## Install NodeJS for JavaScript Development on macOS
+## Install NodeJS for JavaScript Development
 
 [Node.js](https://nodejs.org/en/) is a JavaScript runtime built on Chrome's V8 JavaScript engine.
 
