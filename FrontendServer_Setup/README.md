@@ -83,7 +83,7 @@
 3. On your domain registrar (Probably [GoDaddy](https://www.godaddy.com/))
 4. Change Name Servers to the One that DO Have
 
-## Add Certbot to have Https on teh server
+## Add Certbot to have Https on the server
 
 ```bash
     sudo apt-get update
