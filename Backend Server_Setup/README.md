@@ -1,4 +1,4 @@
-# Nackend Server Setup and Deployment
+# Backend Server Setup and Deployment
 
 ## Create Server
 
