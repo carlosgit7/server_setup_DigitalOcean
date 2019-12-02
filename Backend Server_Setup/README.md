@@ -55,7 +55,7 @@
 2. `echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list`
 3. `sudo apt-get update && sudo apt-get install --no-install-recommends yarn`
 4. Open .bashrc to add yarn bin to path with `nano ~/.bashrc`
-5. Add at the end `export PATH="$PATH:`yarn global bin`"`
+5. Add at the end `export PATH="$PATH:\`yarn global bin\`"`
 6. Exit and save with `Ctrl+x` and then `Y` and finally `Enter`
 
 
