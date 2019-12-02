@@ -71,6 +71,8 @@
 2. Install project dependencies going inside the folder and type `yarn`
 3. Create .env file with `nano .env`
 4. Run in PM2 with `pm2 start yarn --interpreter bash --name api -- prod`
+5. Save PM2 to run on server restart`pm2 startup`
+6. Save current PM2 "state" with `pm2 save`
 
 ## Add Nginx Reverse Proxy information
 
