@@ -1,23 +1,10 @@
-# Frontend Server Setup and Deployment
-
-## Create Github Account
-
-1. Create a [GitHub](https://github.com) Account
-2. Add new Repository
-3. Select Private
-4. Command Promt or Terminal go to Application Folder
-5. Configure Git global user
-   5.1 `git config --global user.name "Your Name"`
-   5.2 `git config --global user.email "Your Email"`
-6. Add Github as Origin with `git remote add origin GITHUB_REPO_URL`
-7. Push code to Github with `git push -u origin master`
+# Nackend Server Setup and Deployment
 
 ## Create Server
 
 [Digital Ocean](https://digitalocean.com/) Welcome to the developer cloud. They make it simple to launch in the cloud and scale up as you grow—whether you’re running one virtual machine or ten thousand.
 
-1. Go to Digital Ocean with the previus link and create an account or [Click this link](https://m.do.co/c/ce761b3417ec) for a \$50 credit for 30 days (pretty much a month free)
-2. Create a \$5 Droptlet with Ubuntu 18.04, selecting a temporary password option.
+1. Create a \$5 Droptlet with Ubuntu 18.04, selecting a temporary password option.
 3. Copy the IP Address when the server is created.
 4. Login to the server with [Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) on Windows or ssh command on mac
    4.1 ssh root@SERVER_IP_ADDRESS
@@ -59,29 +46,51 @@
 ## Install Node
 
 1. Install NVM with `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash`
-2. Install Node.js with this command: `nvm install node`
+2. Install Node.js with this command: `nvm install 12.13.1`
 
 ## Install Yarn
 
 1. `curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -`
 2. `echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list`
 3. `sudo apt-get update && sudo apt-get install --no-install-recommends yarn`
+4. Open .bashrc to add yarn bin to path with `nano ~/.bashrc`
+5. Add at the end `export PATH="$PATH:`yarn global bin`"`
+6. Exit and save with `Ctrl+x` and then `Y` and finally `Enter`
 
-## Build Website
+
+## Install PM2
+
+[PM2](https://pm2.keymetrics.io/)  PM2 is a daemon process manager that will help you manage and keep your application online 24/7 
+
+1. `yarn global add pm2`
+
+## Run API
 
 1. Clone Github repo with `clone GITHUB_REPO_URL`
 2. Install project dependencies going inside the folder and type `yarn`
-3. Build with `yarn build`
-4. Give user permissions to Nginx Folder `sudo chown -R /var/www/html/`
-5. Remove content of Nginx folder with `rm /var/www/html/*`
-6. Copy dist folder to nginx folder with `cp dist/* /var/www/html/`
+3. Create .env file with `nano .env`
+4. Run in PM2 with `pm2 start yarn --interpreter bash --name api -- prod`
 
-## Add domain to Digital Ocean
+## Add Nginx Reverse Proxy information
 
-1. DO Console click on DNS
-2. Add Site and point @ to server
-3. On your domain registrar (Probably [GoDaddy](https://www.godaddy.com/))
-4. Change Name Servers to the One that DO Have
+1. `sudo nano /etc/nginx/conf.d/api.conf`
+2. Type
+```bash
+server {
+        listen          80;
+        listen          [::]:80;
+        server_name     api.rodolfo-roman.site;
+
+        location / {
+                proxy_pass http://localhost:3000;
+        }
+
+}
+```
+3. Exit and save with `Ctrl+x` and then `Y` and finally `Enter`
+4. Test configuration with `sudo nginx -t`
+5. Test configuration with `sudo nginx -s reload`
+
 
 ## Add Certbot to have Https on the server
 
