@@ -67,7 +67,7 @@
 
 ## Run API
 
-1. Clone Github repo with `clone GITHUB_REPO_URL`
+1. Clone Github repo with `git clone GITHUB_REPO_URL`
 2. Install project dependencies going inside the folder and type `yarn`
 3. Create .env file with `nano .env`
 4. Run in PM2 with `pm2 start yarn --interpreter bash --name api -- prod`
