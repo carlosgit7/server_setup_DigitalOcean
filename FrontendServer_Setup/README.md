@@ -14,6 +14,8 @@
 
 1. Update server components list with `apt update`
 2. Upgrade server components with `apt upgrade`
+3. Remove unused apps with `apt autoremove`
+4. Restart `reboot now`
 
 ## Add Normal Sudo User and disable Root remote Login
 
@@ -46,7 +48,7 @@
 
 ## Install Node
 
-1. Install NVM with `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash`
+1. Install NVM with `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash`
 2. Install Node.js with this command: `nvm install node`
 
 ## Install Yarn
@@ -60,9 +62,9 @@
 1. Clone Github repo with `clone GITHUB_REPO_URL`
 2. Install project dependencies going inside the folder and type `yarn`
 3. Build with `yarn build`
-4. Give user permissions to Nginx Folder `sudo chown -R /var/www/html/`
-5. Remove content of Nginx folder with `rm /var/www/html/*`
-6. Copy dist folder to nginx folder with `cp dist/* /var/www/html/`
+4. Give user permissions to Nginx Folder `sudo chown -R /var/www/`
+5. Create folder for the app `sudo mkdir /var/www/APP_NAME`
+6. Copy dist folder to nginx folder with `cp dist/* /var/www/APP_NAME/`
 
 ## Add domain to Digital Ocean
 
