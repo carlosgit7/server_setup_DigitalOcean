@@ -73,15 +73,16 @@ Digital Ocean, Welcome to the developer cloud. They make it simple to launch in 
 3. On your domain registrar (Probably [GoDaddy](https://www.godaddy.com/))
 4. Change Name Servers to the One that DO Have
 
-## Add Certbot to have Https on the server
+## Add Certbot to have Https on the server (FIXED COMMANDS, FOLLOW ONE AT A TIME)
 
 ```bash
     sudo apt-get update
     sudo apt-get install software-properties-common
     sudo add-apt-repository universe
-    sudo add-apt-repository ppa:certbot/certbot
-    sudo apt-get update
-    sudo apt-get install certbot python-certbot-nginx
-    sudo certbot --nginx
-    sudo certbot certonly --nginx
+    cd ~
+    wget https://dl.eff.org/certbot-auto
+    sudo mv certbot-auto /usr/local/bin/certbot-auto
+    sudo chown root /usr/local/bin/certbot-auto
+    sudo chmod 0755 /usr/local/bin/certbot-auto
+    sudo /usr/local/bin/certbot-auto --nginx
 ```
