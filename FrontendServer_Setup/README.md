@@ -2,7 +2,7 @@
 
 ## Create Server
 
-[Digital Ocean](https://digitalocean.com/) Welcome to the developer cloud. They make it simple to launch in the cloud and scale up as you grow—whether you’re running one virtual machine or ten thousand.
+Digital Ocean, Welcome to the developer cloud. They make it simple to launch in the cloud and scale up as you grow—whether you’re running one virtual machine or ten thousand.
 
 1. Go to Digital Ocean with the previus link and create an account or [Click this link](https://m.do.co/c/ce761b3417ec) for a \$50 credit for 30 days (pretty much a month free)
 2. Create a \$5 Droptlet with Ubuntu 18.04, selecting a temporary password option.
