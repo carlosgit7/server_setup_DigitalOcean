@@ -23,7 +23,7 @@ Digital Ocean, Welcome to the developer cloud. They make it simple to launch in 
    1.1 Type password and information needed
 2. `usermod -aG sudo username` Where username is the user created in previous step
 3. Test user conenction exits the server and acces now with `username` instead of `root`
-4. Log back with root and execute `nano /etc/ssh/sshd_config`
+4. Log back with root and execute `sudo nano /etc/ssh/sshd_config`
 5. Change `PermitRootLogin yes` to `PermitRootLogin no` and `#PermitEmptyPasswords no` to `PermitEmptyPasswords no`
 6. Exit and save with `Ctrl+x` and then `Y` and finally `Enter`
 7. Restart ssh with `/etc/init.d/ssh restart`
