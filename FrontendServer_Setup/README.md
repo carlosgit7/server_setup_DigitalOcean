@@ -1,17 +1,5 @@
 # Frontend Server Setup and Deployment
 
-## Create Github Account
-
-1. Create a [GitHub](https://github.com) Account
-2. Add new Repository
-3. Select Private
-4. Command Promt or Terminal go to Application Folder
-5. Configure Git global user
-   5.1 `git config --global user.name "Your Name"`
-   5.2 `git config --global user.email "Your Email"`
-6. Add Github as Origin with `git remote add origin GITHUB_REPO_URL`
-7. Push code to Github with `git push -u origin master`
-
 ## Create Server
 
 [Digital Ocean](https://digitalocean.com/) Welcome to the developer cloud. They make it simple to launch in the cloud and scale up as you grow—whether you’re running one virtual machine or ten thousand.
