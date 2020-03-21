@@ -46,8 +46,8 @@
 
 ## Install Node
 
-1. Install NVM with `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash`
-2. Install Node.js with this command: `nvm install 12.13.1`
+1. Install NVM with `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash`
+2. Install Node.js with this command: `nvm install node`
 
 ## Install Yarn
 
@@ -101,9 +101,10 @@ server {
     sudo apt-get update
     sudo apt-get install software-properties-common
     sudo add-apt-repository universe
-    sudo add-apt-repository ppa:certbot/certbot
-    sudo apt-get update
-    sudo apt-get install certbot python-certbot-nginx
-    sudo certbot --nginx
-    sudo certbot certonly --nginx
+    cd ~
+    wget https://dl.eff.org/certbot-auto
+    sudo mv certbot-auto /usr/local/bin/certbot-auto
+    sudo chown root /usr/local/bin/certbot-auto
+    sudo chmod 0755 /usr/local/bin/certbot-auto
+    sudo /usr/local/bin/certbot-auto --nginx
 ```
