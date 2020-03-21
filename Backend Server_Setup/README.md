@@ -70,7 +70,7 @@
 1. Clone Github repo with `git clone GITHUB_REPO_URL`
 2. Install project dependencies going inside the folder and type `yarn`
 3. Create .env file with `nano .env`
-4. Run in PM2 with `pm2 start yarn --interpreter bash --name api -- prod`
+4. Run in PM2 with `pm2 start yarn --interpreter bash --name api -- start`
 5. Save PM2 to run on server restart`pm2 startup`
 6. Save current PM2 "state" with `pm2 save`
 
