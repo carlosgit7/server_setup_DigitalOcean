@@ -8,7 +8,7 @@ Digital Ocean, Welcome to the developer cloud. They make it simple to launch in 
 2. Create a \$5 Droptlet with Ubuntu 19.10, selecting a temporary password option.
 3. Copy the IP Address when the server is created.
 4. Login to the server with [Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) on Windows or ssh command on mac
-4.1 ssh root@SERVER_IP_ADDRESS
+5. ssh root@SERVER_IP_ADDRESS
 
 ## Update Server
 
