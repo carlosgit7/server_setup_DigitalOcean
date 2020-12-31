@@ -10,6 +10,14 @@ Digital Ocean, Welcome to the developer cloud. They make it simple to launch in 
 4. Login to the server with [Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) on Windows or ssh command on mac
 5. ssh root@SERVER_IP_ADDRESS
 
+## Add domain to Digital Ocean
+
+1. DO Console click on DNS
+2. Add Site and point @ to server
+3. On your domain registrar (Probably [GoDaddy](https://www.godaddy.com/))
+4. Change Name Servers to the One that DO Have
+5. Point Domain to Server
+
 ## Update Server
 
 1. Update server components list with `apt update`
@@ -65,13 +73,6 @@ Digital Ocean, Welcome to the developer cloud. They make it simple to launch in 
 4. Give user permissions to Nginx Folder `sudo chown -R /var/www/`
 5. Create folder for the app `sudo mkdir /var/www/APP_NAME`
 6. Copy dist folder to nginx folder with `cp dist/* /var/www/APP_NAME/`
-
-## Add domain to Digital Ocean
-
-1. DO Console click on DNS
-2. Add Site and point @ to server
-3. On your domain registrar (Probably [GoDaddy](https://www.godaddy.com/))
-4. Change Name Servers to the One that DO Have
 
 ## Add Certbot to have Https on the server (FIXED COMMANDS, FOLLOW ONE AT A TIME)
 
