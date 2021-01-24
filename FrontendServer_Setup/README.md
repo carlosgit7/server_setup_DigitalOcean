@@ -77,13 +77,8 @@ Digital Ocean, Welcome to the developer cloud. They make it simple to launch in 
 ## Add Certbot to have Https on the server (FIXED COMMANDS, FOLLOW ONE AT A TIME)
 
 ```bash
-    sudo apt-get update
-    sudo apt-get install software-properties-common
-    sudo add-apt-repository universe
-    cd ~
-    wget https://dl.eff.org/certbot-auto
-    sudo mv certbot-auto /usr/local/bin/certbot-auto
-    sudo chown root /usr/local/bin/certbot-auto
-    sudo chmod 0755 /usr/local/bin/certbot-auto
-    sudo /usr/local/bin/certbot-auto --nginx
+    sudo snap install core; sudo snap refresh core
+    sudo snap install --classic certbot
+    sudo ln -s /snap/bin/certbot /usr/bin/certbot
+    sudo certbot --nginx
 ```
