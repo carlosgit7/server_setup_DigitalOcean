@@ -14,6 +14,8 @@
 
 1. Update server components list with `apt update`
 2. Upgrade server components with `apt upgrade`
+3. Remove unused apps with `apt autoremove`
+4. Restart `reboot now`
 
 ## Add Normal Sudo User and disable Root remote Login
 
