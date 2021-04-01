@@ -4,7 +4,7 @@
 
 [Digital Ocean](https://digitalocean.com/) Welcome to the developer cloud. They make it simple to launch in the cloud and scale up as you grow—whether you’re running one virtual machine or ten thousand.
 
-1. Create a \$5 Droptlet with Ubuntu 18.04, selecting a temporary password option.
+1. Create a \$5 Droptlet with Ubuntu 20.04, selecting a temporary password option.
 2. Create a domain entry pointng to the server
 3. Copy the IP Address when the server is created.
 4. Login to the server with [Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) on Windows or ssh command on mac
