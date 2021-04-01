@@ -46,33 +46,24 @@
 
 ## Install Node
 
-1. Install NVM with `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash`
+1. Install NVM with `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash`
 2. Install Node.js with this command: `nvm install node`
-
-## Install Yarn
-
-1. `curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -`
-2. `echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list`
-3. `sudo apt-get update && sudo apt-get install --no-install-recommends yarn`
-4. Open .bashrc to add yarn bin to path with `nano ~/.bashrc`
-5. Add at the end ```export PATH="$PATH:`yarn global bin`"```
-6. Exit and save with `Ctrl+x` and then `Y` and finally `Enter`
-
 
 ## Install PM2
 
 [PM2](https://pm2.keymetrics.io/)  PM2 is a daemon process manager that will help you manage and keep your application online 24/7 
 
-1. `yarn global add pm2`
+1. `npm i -g pm2`
 
 ## Run API
 
 1. Clone Github repo with `git clone GITHUB_REPO_URL`
-2. Install project dependencies going inside the folder and type `yarn`
+2. Install project dependencies going inside the folder and type `npm install`
 3. Create .env file with `nano .env`
-4. Run in PM2 with `pm2 start yarn --interpreter bash --name api -- start`
-5. Save PM2 to run on server restart`pm2 startup`
-6. Save current PM2 "state" with `pm2 save`
+4. Build the app with `npm run build`
+5. Run in PM2 with `pm2 start npm --name "app name" -- start`
+6. Save PM2 to run on server restart`pm2 startup`
+7. Save current PM2 "state" with `pm2 save`
 
 ## Add Nginx Reverse Proxy information
 
@@ -82,7 +73,7 @@
 server {
         listen          80;
         listen          [::]:80;
-        server_name     api.rodolfo-roman.site;
+        server_name     api.rodolforoman.xyz;
 
         location / {
                 proxy_pass http://localhost:3000;
