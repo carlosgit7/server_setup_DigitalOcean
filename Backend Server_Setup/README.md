@@ -2,7 +2,7 @@
 
 ## Create Server
 
-[Digital Ocean](https://digitalocean.com/) Welcome to the developer cloud. They make it simple to launch in the cloud and scale up as you grow—whether you’re running one virtual machine or ten thousand.
+[Digital Ocean](https://m.do.co/c/ce761b3417ec) Welcome to the developer cloud. They make it simple to launch in the cloud and scale up as you grow—whether you’re running one virtual machine or ten thousand.
 
 1. Create a \$5 Droptlet with Ubuntu 20.04, selecting a temporary password option.
 2. Create a domain entry pointng to the server
