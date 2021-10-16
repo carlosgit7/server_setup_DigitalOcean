@@ -5,7 +5,7 @@
 Digital Ocean, Welcome to the developer cloud. They make it simple to launch in the cloud and scale up as you grow—whether you’re running one virtual machine or ten thousand.
 
 1. Go to Digital Ocean with the previus link and create an account or [Click this link](https://m.do.co/c/ce761b3417ec) for a \$100 credit for 60 days (pretty much two months free)
-2. Create a \$5 Droptlet with Ubuntu 19.10, selecting a temporary password option.
+2. Create a \$6 Droptlet with Ubuntu 21.04, selecting a temporary password option.
 3. Copy the IP Address when the server is created.
 4. Login to the server with [Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) on Windows or ssh command on mac
 5. ssh root@SERVER_IP_ADDRESS
