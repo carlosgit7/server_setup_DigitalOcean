@@ -48,7 +48,7 @@
 
 ## Install Node
 
-1. Install NVM with `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash`
+1. Install NVM with `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash`
 2. Install Node.js with this command: `nvm install node`
 
 ## Install PM2
